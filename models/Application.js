@@ -26,6 +26,9 @@ const Application = sequelize.define('Application', {
   duration: {
     type: DataTypes.INTEGER,
   },
+  mode:{
+    type:DataTypes.STRING
+  },
   message: {
     type: DataTypes.TEXT,
   },
