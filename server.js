@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 5000;
 
 // Sync DB and start server
 sequelize
-  .sync({alter:false})
+  .sync({alter:true})
   .then(() => {
 
     console.log("✅ PostgreSQL Connected & Synced via Sequelize");
