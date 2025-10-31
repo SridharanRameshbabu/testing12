@@ -11,7 +11,7 @@ const Application = sequelize.define('Application', {
     allowNull: false,
   },
   mobile:{
-    type:DataTypes.INTEGER,
+    type:DataTypes.STRING,
     allowNull:false,
   },
   college: {
