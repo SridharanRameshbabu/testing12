@@ -40,7 +40,7 @@ const applyForInternship = async (req, res) => {
 
     <p style="font-size:16px;line-height:1.6;color:#374151;">
       Hello Balaji,<br><br>
-      You have a <span style="color:#16a34a;font-weight:bold;">new internship application</span>.
+      You have a <span style="color:#16a34a;font-weight:bold;">New internship application</span>.
     </p>
 
     <p style="font-size:15px;color:#111827;">
@@ -62,7 +62,7 @@ const applyForInternship = async (req, res) => {
     <hr style="margin:30px 0;border:0;border-top:2px dashed #e5e7eb;">
 
     <p style="font-size:12px;color:#9ca3af;text-align:center;">
-      — Sent from <span style="color:#2563eb;">BTC Internship Portal</span> —
+      — Sent from <span style="color:#2563eb;">BTC Internship Portal - Routes</span> —
     </p>
   </body>
 </html>
