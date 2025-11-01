@@ -78,7 +78,7 @@ College: ${college || "—"}
 Department: ${department || "—"}
 Domain: ${domain || "—"}
 Mode: ${mode || "-"}
-Duration: ${duration ? duration + " weeks" : "—"}
+Duration: ${duration ? duration + "Months" : "—"}
 Message: ${message || "—"}
 
 (Note: resume ${file ? "attached" : "not attached"})
