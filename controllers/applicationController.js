@@ -51,7 +51,7 @@ const applyForInternship = async (req, res) => {
       <strong>Department:</strong> ${escapeHtml(department || "—")}<br>
       <strong>Domain:</strong> ${escapeHtml(domain || "—")}<br>
       <strong>Mode:</strong> ${escapeHtml(mode || "-")}<br>
-      <strong>Duration:</strong> ${duration ? escapeHtml(duration.toString()) + " weeks" : "—"}<br>
+      <strong>Duration:</strong> ${duration ? escapeHtml(duration.toString()) + " months" : "—"}<br>
       <strong>Message:</strong> ${escapeHtml(message || "—")}
     </p>
 
