@@ -4,8 +4,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const WantHiring = async(req,res) =>{
     try{
-        const {companyName,companyEmail,companyPhone,domain,numofstudents} = req.body;
-        if(!companyName || !companyEmail || !companyPhone || !domain || !numofstudents){
+        const {companyName,companyEmail,companyPhone,domain,numofstudents,experienceLevel,message} = req.body;
+        if(!companyName || !companyEmail || !companyPhone || !domain || !numofstudents ){
             console.log(companyEmail,companyName,companyPhone,domain,numofstudents)
             return res.status(400).json({error:"Some data missing"})
         }
@@ -15,7 +15,9 @@ const WantHiring = async(req,res) =>{
             companyEmail,
             companyPhone,
             domain,
-            numofstudents
+            numofstudents,
+            experienceLevel,
+            message
         });
 
         const htmlContent = `
@@ -34,7 +36,9 @@ const WantHiring = async(req,res) =>{
                 <strong>Company Email:</strong> <a href="mailto:${escapeHtml(companyEmail)}" style="color:#2563eb;text-decoration:none;">${escapeHtml(companyEmail)}</a><br>
                 <strong>Company Phone:</strong><span style="color:#dc2626;">${escapeHtml(companyPhone)}</span><br>
                 <strong>Domain Wanted:</strong> ${escapeHtml(domain)}<br>
-                <strong>Number of Students</strong> ${escapeHtml(numofstudents)}<br>
+                <strong>Number of Candidates</strong> ${escapeHtml(numofstudents)}<br>
+                <strong>Experience Level:</strong> ${escapeHtml(experienceLevel || "-")}<br>
+                <strong>Message:</strong> ${escapeHtml(message || "-")}<br>
                 </p>
 
                 <hr style="margin:30px 0;border:0;border-top:2px dashed #e5e7eb;">
@@ -51,7 +55,9 @@ const WantHiring = async(req,res) =>{
             Company Email:${companyEmail},
             Company Phone:${companyPhone},
             Domain Wanted:${domain},
-            Number of Student:${numofstudents}
+            Number of Candidates:${numofstudents},
+            Experience Level: ${experienceLevel},
+            Message:${message}
         `;
 
         const emailOptions = {

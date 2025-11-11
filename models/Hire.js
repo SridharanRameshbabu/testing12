@@ -9,7 +9,7 @@ const HireWithUs = sequelize.define("HireWithUs",{
     companyEmail:{
         type:DataTypes.STRING,
         allowNull:false,
-        unique:true
+        unique:false
     },
     companyPhone:{
         type:DataTypes.STRING,
@@ -22,6 +22,14 @@ const HireWithUs = sequelize.define("HireWithUs",{
     numofstudents:{
         type:DataTypes.INTEGER,
         allowNull:false
+    },
+    experienceLevel:{
+        type:DataTypes.STRING,
+        allowNull:true
+    },
+    message:{
+        type:DataTypes.STRING,
+        allowNull:true
     }
 })
 
