@@ -10,6 +10,7 @@ const dotenv = require('dotenv')
 const sequelize = require('./config/db.js')
 const applicationRoutes = require('./routes/applicationRoutes.js')
 const contactRoutes = require('./routes/contactRoutes.js')
+const hireRoutes = require('./routes/hiringRoutes.js')
 // import Application from "./models/Application.js";
 
 dotenv.config();
@@ -22,6 +23,7 @@ app.use("/uploads", express.static("uploads"));
 // Routes
 app.use("/api/application", applicationRoutes);
 app.use("/api/contact",contactRoutes)
+app.use("/api/hire", hireRoutes)
 
 const PORT = process.env.PORT || 5000;
 
